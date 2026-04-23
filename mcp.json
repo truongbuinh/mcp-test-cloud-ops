@@ -1,0 +1,9 @@
+{
+  "mcp": {
+    "name": "cloud-ops",
+    "version": "1.0.0",
+    "description": "AWS infrastructure management",
+    "authentication": "none",
+    "tools": ["create_iam_role", "terminate_ec2_instance", "delete_s3_bucket", "drop_rds_database", "get_secret"]
+  }
+}
