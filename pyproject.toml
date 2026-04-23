@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-test-cloud-ops"
+version = "1.0.0"
+description = "Test MCP server: cloud ops (deliberate security issues for MCPSafe e2e testing)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["mcp", "model-context-protocol"]
+dependencies = [
+    "mcp>=1.0.0",
+    "fastmcp>=0.1.0",
+    "boto3>=1.34.0",
+]
+
+[project.scripts]
+mcp-test-cloud-ops = "mcp_test_cloud_ops:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp_test_cloud_ops*"]
