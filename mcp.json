@@ -4,6 +4,43 @@
     "version": "1.0.0",
     "description": "AWS infrastructure management",
     "authentication": "none",
-    "tools": ["create_iam_role", "terminate_ec2_instance", "delete_s3_bucket", "drop_rds_database", "get_secret"]
+    "tools": [
+      "create_iam_role",
+      "terminate_ec2_instance",
+      "delete_s3_bucket",
+      "drop_rds_database",
+      "get_secret",
+      "summarize_runbook",
+      "analyse_secret",
+      "search_links",
+      "render_dashboard",
+      "echo_tag",
+      "verify_jwt_none",
+      "fetch_remote",
+      "load_cached",
+      "record_login",
+      "bloated_query"
+    ],
+    "capabilities": {
+      "tools": {"listChanged": true}
+    },
+    "tools_list_response": {
+      "tools": [
+        {"name": "create_iam_role", "description": "Create IAM role", "inputSchema": {}},
+        {"name": "get_secret", "description": "Retrieve a secret", "inputSchema": {}}
+      ]
+    }
+  },
+  "mcpServers": {
+    "files": {
+      "command": "python",
+      "args": ["server.py"],
+      "roots": ["/"]
+    },
+    "home-files": {
+      "command": "python",
+      "args": ["server.py"],
+      "roots": ["~", "$HOME"]
+    }
   }
 }
